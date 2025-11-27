@@ -1,0 +1,6 @@
+1. Vad betyder alla variabler?
+2. Om specifik data för en viss individ saknas så exkluderar jag den från analysen va?
+3. Om datan är sammanslagen data från flera kohorter, hur förhåller man sig till att de olika kohorterna kan ha olika exponering?
+4. Vilka analyser bör vi köra? 
+5. Hur tycker du att jag ska presentera resultat? I figurform/tabell?
+6. Skriva på engelska eller svenska?

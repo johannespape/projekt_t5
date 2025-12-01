@@ -1,0 +1,12 @@
+Analyzing cohort: MKC
+Number of non-smokers: 3774
+Number of smokers: 2068
+Number of former smokers: 3542
+Result of ANOVA for SGHS1: F_onewayResult(statistic=118.89873538664297, pvalue=1.01519910931653e-51)
+Result of ANOVA for SGHS2: F_onewayResult(statistic=142.90220288143763, pvalue=7.327954672540354e-62)
+Result of t-test for SGHS1 between smokers and non smokers: Ttest_indResult(statistic=-10.378639223206903, pvalue=5.11256234332707e-25)
+Result of t-test for SGHS2 between smokers and non smokers: Ttest_indResult(statistic=-11.353681237673753, pvalue=1.4490329897364125e-29)
+SGHS1 means are: Former smokers 0.868, smokers 0.793, non smokers 0.842
+SGHS1 SEMs are: Former smokers 0.003, smokers 0.004, non smokers 0.003
+SGHS2 means are: Former smokers 0.940, smokers 0.855, non smokers 0.912
+SGHS2 SEMs are: Former smokers 0.003, smokers 0.004, non smokers 0.003

@@ -1,0 +1,12 @@
+Analyzing cohort: SCAPIS
+Number of non-smokers: 3806
+Number of smokers: 803
+Number of former smokers: 2319
+Result of ANOVA for SGHS1: F_onewayResult(statistic=131.04579268161942, pvalue=1.3743511260807926e-56)
+Result of ANOVA for SGHS2: F_onewayResult(statistic=127.38966832318323, pvalue=4.6645269278111556e-55)
+Result of t-test for SGHS1 between smokers and non smokers: Ttest_indResult(statistic=-16.24047735999227, pvalue=1.0185320515557834e-57)
+Result of t-test for SGHS2 between smokers and non smokers: Ttest_indResult(statistic=-15.605828895741016, pvalue=1.5277032241005014e-53)
+SGHS1 means are: Former smokers 1.071, smokers 0.962, non smokers 1.090
+SGHS1 SEMs are: Former smokers 0.004, smokers 0.006, non smokers 0.003
+SGHS2 means are: Former smokers 0.849, smokers 0.760, non smokers 0.887
+SGHS2 SEMs are: Former smokers 0.004, smokers 0.007, non smokers 0.003

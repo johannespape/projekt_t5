@@ -1,0 +1,12 @@
+Analyzing MKC, SCAPIS and LifeGene
+Number of non-smokers: 8398
+Number of smokers: 3066
+Number of former smokers: 7238
+Result of ANOVA for SGHS1: F_onewayResult(statistic=407.72496363374256, pvalue=4.781916381901213e-174)
+Result of ANOVA for SGHS2: F_onewayResult(statistic=222.94231870310253, pvalue=2.0593863779036194e-96)
+Result of t-test for SGHS1 between smokers and non smokers: Ttest_indResult(statistic=-26.718545279581917, pvalue=1.2773607784905867e-152)
+Result of t-test for SGHS2 between smokers and non smokers: Ttest_indResult(statistic=-17.54270654375184, pvalue=5.214958642762443e-68)
+SGHS1 means are: Former smokers 0.995, smokers 0.857, non smokers 0.988
+SGHS1 SEMs are: Former smokers 0.003, smokers 0.004, non smokers 0.003
+SGHS2 means are: Former smokers 0.932, smokers 0.836, non smokers 0.912
+SGHS2 SEMs are: Former smokers 0.003, smokers 0.003, non smokers 0.002

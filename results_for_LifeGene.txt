@@ -1,0 +1,12 @@
+Analyzing cohort: LifeGene
+Number of non-smokers: 818
+Number of smokers: 195
+Number of former smokers: 1377
+Result of ANOVA for SGHS1: F_onewayResult(statistic=7.9887360281697255, pvalue=0.0003484142922833751)
+Result of ANOVA for SGHS2: F_onewayResult(statistic=13.34935140456243, pvalue=1.7164593297140263e-06)
+Result of t-test for SGHS1 between smokers and non smokers: Ttest_indResult(statistic=-3.5925348804996005, pvalue=0.00034324786932790944)
+Result of t-test for SGHS2 between smokers and non smokers: Ttest_indResult(statistic=-4.239064733262377, pvalue=2.4499078693724186e-05)
+SGHS1 means are: Former smokers 1.194, smokers 1.112, non smokers 1.186
+SGHS1 SEMs are: Former smokers 0.007, smokers 0.018, non smokers 0.009
+SGHS2 means are: Former smokers 1.049, smokers 0.941, non smokers 1.030
+SGHS2 SEMs are: Former smokers 0.008, smokers 0.018, non smokers 0.009

@@ -1,0 +1,10 @@
+Number of people before removing empty SGHS1 or SGHS2 values: 23104
+Number of people after removing empty SGHS1 or SGHS2 values: 18900
+Number of smokers: 8398
+Number of non smokers: 7238
+Result of ANOVA for SGHS1: F_onewayResult(statistic=41.43224363760142, pvalue=1.0660055411205393e-18)
+Result of ANOVA for SGHS2: F_onewayResult(statistic=34.54416686885666, pvalue=1.0295469424575947e-15)
+Result of t-test for SGHS1 between smokers and non smokers: Ttest_indResult(statistic=-1.7974442639845116, pvalue=0.07228440888705424)
+Result of t-test for SGHS2 between smokers and non smokers: Ttest_indResult(statistic=-5.665735071536802, pvalue=1.4897526094406563e-08)
+SGHS1 means are: all 0.968, smokers 0.988, non smokers 0.995
+SGHS2 means are: all 0.907, smokers 0.912, non smokers 0.932

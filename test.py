@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from sklearn.linear_model import LogisticRegression
+
 # Read data
 def read_and_return_file():
     filename = "data.csv"
@@ -16,7 +18,6 @@ def read_and_return_file():
 
 # Print things about data
 def print_data(dataframe, col="age"):
-
     print("Total number of rows: %d" % len(dataframe))
 
     print("Field names are: " + ', '.join(dataframe.columns))
@@ -34,7 +35,7 @@ def print_data(dataframe, col="age"):
     print("%s mean for sample is: %.1f" % (col, dataframe[col].mean()))
 
 # Function to plot two columns against each other
-def plot_data(dataframe, col1, col2):
+def lin_reg_plot_data(dataframe, col1, col2):
     dataframe[col1] = pd.to_numeric(dataframe[col1], errors='coerce')
     dataframe[col2] = pd.to_numeric(dataframe[col2], errors='coerce')
     dataframe_clean = dataframe.dropna(subset=[col1, col2])
@@ -43,7 +44,6 @@ def plot_data(dataframe, col1, col2):
         scipy.stats.linregress(dataframe_clean[col1], dataframe_clean[col2])
     X = np.linspace(dataframe_clean[col1].min(), dataframe_clean[col1].max())
     Y = X*slope + intercept
-
     print(f"Linear regression for {col1} as a function of {col2} resulted in a slope " + \
           f"of {slope:.2f}, R value of {r_value:.2f}, a standard error of {std_err:.5f} " + \
           f"and a P-value of {p_value:.5f} ")
@@ -54,6 +54,32 @@ def plot_data(dataframe, col1, col2):
     plt.ylabel(col2)
     plt.show()
 
+# Function to plot smoking
+def plot_smoking(dataframe, col1, col2='smo_rev'):
+    # Format data
+    dataframe[col1] = pd.to_numeric(dataframe[col1], errors='coerce')
+    dataframe[col2] = pd.to_numeric(dataframe[col2], errors='coerce')
+    dataframe_clean = dataframe.dropna(subset=[col1, col2])
+    values = [0,2]
+    df = dataframe_clean[dataframe_clean[col2].isin(values)]
+    df[col2] = df[col2].replace(2, 1)
+
+    # Fit the model to data
+    logreg = LogisticRegression(random_state=16)
+    x_val = np.array(df[col1]).reshape(-1,1)
+    y_val = np.array(df[col2])
+    logreg.fit(x_val, y_val)
+    X = np.linspace(x_val.min(), x_val.max(), 300).reshape(-1, 1)
+    Y = logreg.predict(X)
+    print(f"Logistic regression for {col1} as a function of {col2}." )
+    print(f"Plotting {col2} as a function of {col1}")
+    plt.plot(X,Y, color="red")
+    plt.scatter(df[col1], df[col2], s=1)
+    plt.xlabel(col1)
+    plt.ylabel(col2)
+    plt.show()
+
+# Function to perform ANOVA and t-test
 def anova_and_ttest(dataframe, cohort=0):
     corresponding_cohort = {1: 'MKC', 2: 'SCAPIS', 3: 'LifeGene'}
     # corresponding_cohort = ['', 'MKC', 'SCAPIS', 'LifeGene']
@@ -143,7 +169,9 @@ def anova_and_ttest(dataframe, cohort=0):
 
 if __name__ == "__main__":
     dataframe = read_and_return_file()
+    mediation_analysis(dataframe, )
     # print_data(dataframe, "HbA1c")
-    # plot_data(dataframe, 'BMI', 'SGHS2')
-    anova_and_ttest(dataframe, 3)
+    # lin_reg_plot_data(dataframe, 'age', 'BMI')
+    # plot_smoking(dataframe, 'age')
+    # anova_and_ttest(dataframe, 3)
 

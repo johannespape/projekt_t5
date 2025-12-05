@@ -169,9 +169,8 @@ def anova_and_ttest(dataframe, cohort=0):
 
 if __name__ == "__main__":
     dataframe = read_and_return_file()
-    mediation_analysis(dataframe, )
     # print_data(dataframe, "HbA1c")
     # lin_reg_plot_data(dataframe, 'age', 'BMI')
     # plot_smoking(dataframe, 'age')
-    # anova_and_ttest(dataframe, 3)
+    # anova_and_ttest(dataframe, 0)
 
